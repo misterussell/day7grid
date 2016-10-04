@@ -1,0 +1,27 @@
+body {
+  font: {
+    size: 62.5%;
+    // family: 'Roboto', sans-serif;
+    family: 'Source Sans Pro', sans-serif;
+  }
+  color: $color_default;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  // better to pad to have children move away from the sides
+  box-sizing: border-box;
+}
+
+.index-link {
+  width: 50%;
+  margin: 0 auto;
+  a {
+    text-align: center;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
