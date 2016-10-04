@@ -9,10 +9,15 @@
     border-bottom: 0;
   }
 
+  &:hover {
+    background: $color_default;
+    color: white;
+  }
+
   .fa {
     font-size: 7rem;
     padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-bottom: 1.5rem;
   }
 
   .product-name {
@@ -29,30 +34,74 @@
     content: '';
     border-top: .25rem solid $color_default;
     width: 5rem;
-    bottom: 2rem;
-    // left: 1rem;
+    bottom: 5.25rem;
+    left: calc(50% - 2.5rem);
   }
 
-}
-
-.product {
-  a:hover .product-item {
-    background: $color_default;
+  .descriptor {
     color: white;
+    position: relative;
+  }
+
+  .descriptor::after {
+    position: absolute;
+    content: '';
+    border-top: .25rem solid white;
+    width: 5rem;
+    bottom: 1rem;
+    left: calc(50% - 2.5rem);
   }
 
 }
 
 @media (min-width: 670px) and (max-width: 880px) {
-
   .product-item {
     float: left;
     width: 50%;
-    padding-right: 2rem;
-
 
   &:nth-child(2n+1) {
       border-right: .1rem solid rgba(215, 215, 215, 0.63);
+    }
+  }
+}
+
+@media (min-width: 881px) {
+
+  .product {
+    padding-top: 4rem;
+  }
+
+  .product-item {
+    float: left;
+    width: 33%;
+    padding-bottom: 2rem;
+
+    .product-name {
+      font-size: 2rem;
+    }
+
+    .fa {
+      font-size: 11rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      border-top: .25rem solid $color_default;
+      width: 5rem;
+      bottom: 7rem;
+      left: calc(50% - 2.5rem);
+    }
+
+    .descriptor {
+      color: white;
+    }
+
+  &:nth-child(3n+2) {
+      border-right: .1rem solid rgba(215, 215, 215, 0.63);
+      border-left: .1rem solid rgba(215, 215, 215, 0.63);
     }
   }
 }

@@ -14,14 +14,10 @@ body {
 
 .product {
   text-align: center;
-  // position: relative;
-}
-
-.index-link {
-  width: 50%;
-  margin: 0 auto;
-  a {
-    text-align: center;
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
   }
 }
 
@@ -34,4 +30,10 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: 881px) {
+  body {
+    padding: 2rem;
+  }
 }
