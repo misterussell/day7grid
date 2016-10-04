@@ -12,12 +12,22 @@ body {
   box-sizing: border-box;
 }
 
+.product {
+  text-align: center;
+  // position: relative;
+}
+
 .index-link {
   width: 50%;
   margin: 0 auto;
   a {
     text-align: center;
   }
+}
+
+a {
+  color: $color_default;
+  text-decoration: none;
 }
 
 ul {
